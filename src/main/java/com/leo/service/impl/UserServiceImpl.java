@@ -16,8 +16,8 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
 /**
- * @Description: Hello Coder!
  * @version: 1.0
+ * @Description: Hello Coder!
  * @author: Leo
  * @eamil: fraudLeo1@Gmail.com
  * @date:2022/10/24 15:59
@@ -33,7 +33,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         User one = getUserInfo(userDTO);
         System.out.println(one+"1010101");
         if (one!=null) {
-            BeanUtil.copyProperties(one,userDTO,true);
+            BeanUtil.copyProperties(one,userDTO,true);//从数据库将数据复制拉到userDTO
             String token = TokenUtils.genToken(one.getId().toString(), one.getPassword());
             userDTO.setToken(token);
             return userDTO;

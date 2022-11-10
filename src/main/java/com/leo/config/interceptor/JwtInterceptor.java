@@ -64,6 +64,7 @@ public class JwtInterceptor implements HandlerInterceptor {
         try {
             jwtVerifier.verify(token);
         } catch (JWTVerificationException e) {
+            System.out.println(e);
             throw new RuntimeException("401");
         }
 

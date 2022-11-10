@@ -35,5 +35,6 @@ public class User {
     private String address;
 //    @TableField("avatar_url")//这里不需要这个注解,因为spring?mybatis框架自动将这里的下划线转换成驼峰了
 //    private String avatarUrl;
+    private String role;
 
 }

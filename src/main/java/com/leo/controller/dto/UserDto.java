@@ -1,7 +1,10 @@
 package com.leo.controller.dto;
 
+import com.leo.pojo.Menu;
 import lombok.Data;
 import lombok.ToString;
+
+import java.util.List;
 
 /**
  * @Description: 接受前端登录请求参数
@@ -17,5 +20,8 @@ public class UserDto {
     private String password;
     private String nickname;
     private String token;
+    private String role;
+    private List<Menu> menus;
+
 
 }
